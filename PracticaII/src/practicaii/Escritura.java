@@ -43,9 +43,10 @@ public class Escritura {
     }
     
     
-    public void CrearTXT(String periodo){
+    public void CrearTXT(String periodo, File directory){
         //Usar NominaDB.getNominaAPEC(periodo) para coseguir listado de nomina de la base de datos
-        String fileName = "C:/nomina.txt";
+        File fileTXT = new File(directory,"nominaAPEC.txt");
+        String fileName = fileTXT.getPath();
         NominaDB db = new NominaDB();
         List<Nomina> nomina = db.getNominaAPEC(periodo);
         

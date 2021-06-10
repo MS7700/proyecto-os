@@ -135,11 +135,18 @@ public class PracticaUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY); 
+        int result = fileChooser.showOpenDialog(this);
+        if (result == JFileChooser.APPROVE_OPTION) {
+        File directory = fileChooser.getSelectedFile();
+        System.out.println("Selected file: " + directory.getAbsolutePath());
         String periodo = getPeriodoFromDatePicker();
         Escritura escritura = new Escritura();
-        escritura.CrearTXT(periodo);
+        escritura.CrearTXT(periodo, directory);
     }//GEN-LAST:event_jButton1ActionPerformed
-    
+    }
     private String getPeriodoFromDatePicker(){
         Date formDate = new Date();
         
@@ -151,6 +158,7 @@ public class PracticaUI extends javax.swing.JFrame {
         periodo = String.format("%02d%d",localDate.getMonthValue(),localDate.getYear());
         return periodo;
     }
+    
     /**
      * @param args the command line arguments
      */
