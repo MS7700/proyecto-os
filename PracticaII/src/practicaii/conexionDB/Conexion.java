@@ -20,7 +20,6 @@ public class Conexion {
     private static String URLDerby = "jdbc:derby://localhost:1527/PracticaII";
     private static String usuario = "myuser";
     private static String contrasena = "12345";
-
     public static Connection getConexion() throws SQLException {
         if (cn == null) {
             iniciarConexion();

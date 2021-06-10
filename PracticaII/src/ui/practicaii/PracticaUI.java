@@ -5,9 +5,11 @@
  */
 package ui.practicaii;
 
+import java.io.File;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
+import javax.swing.JFileChooser;
 import practicaii.Escritura;
 import practicaii.Lectura;
 import practicaii.conexionDB.NominaDB;
@@ -120,8 +122,16 @@ public class PracticaUI extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Lectura lectura = new Lectura();
-        lectura.LeerTXTaDB();
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+        int result = fileChooser.showOpenDialog(this);
+        if (result == JFileChooser.APPROVE_OPTION) {
+    File selectedFile = fileChooser.getSelectedFile();
+    System.out.println("Selected file: " + selectedFile.getAbsolutePath());
+    Lectura lectura = new Lectura();
+    lectura.LeerTXTaDB(selectedFile);
+}
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
