@@ -28,7 +28,8 @@ public class Escritura {
             fw = new FileWriter(file);
             bw = new BufferedWriter(fw);
             String data = pLine;
-            bw.write(data);
+            bw.append(data);
+            //bw.writeLine(data);
             bw.close();
             System.out.println("Escritura de archivo realizada ...");
         } catch (IOException e) {
@@ -45,25 +46,51 @@ public class Escritura {
     
     public void CrearTXT(String periodo, File directory){
         //Usar NominaDB.getNominaAPEC(periodo) para coseguir listado de nomina de la base de datos
-        File fileTXT = new File(directory,"nominaAPEC.txt");
-        String fileName = fileTXT.getPath();
         NominaDB db = new NominaDB();
         List<Nomina> nomina = db.getNominaAPEC(periodo);
-        
-        for (Nomina registro : nomina) {
+        File fileTXT = new File(directory,"nominaAPEC.txt");
+        BufferedWriter bw = null;
+        FileWriter fw;
+        String fileName = fileTXT.getPath();
+        try{
+            fw = new FileWriter(fileName);
+            bw = new BufferedWriter(fw);
+            for (Nomina registro : nomina) {
             String line = registro.getRNC() + "," + 
                           registro.getPeriodo() + "," +
                           registro.getSueldo() + "," + 
                           registro.getCedula() + "," + 
-                          registro.getTipo_Moneda();
-            
-            try {
-                writeFileLine(fileName,line);
-            }
-            catch(IOException e) {
-                System.out.println(e.getMessage());
-            }
+                          registro.getTipo_Moneda() + "\n";
+            System.out.println(line);
+            bw.append(line);
         } 
+        }catch (IOException e) {
+        } finally {
+            try {
+                if (bw != null) {
+                    bw.close();
+                }
+            } catch (IOException e) {
+            }
+        }
+        
+        
+        
+//        for (Nomina registro : nomina) {
+//            String line = registro.getRNC() + "," + 
+//                          registro.getPeriodo() + "," +
+//                          registro.getSueldo() + "," + 
+//                          registro.getCedula() + "," + 
+//                          registro.getTipo_Moneda();
+//            System.out.println(line);
+//            try {
+//                bw.append(line);
+//            }
+//            catch(IOException e) {
+//                System.out.println(e.getMessage());
+//            }
+//        } 
+//        bw.close();
         JOptionPane.showMessageDialog(null,"Registros guardados correctamente");
     }
 }
