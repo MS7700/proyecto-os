@@ -7,6 +7,7 @@ package ui.lectura;
 
 import java.io.File;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import lectura.xml.LecturaXML;
 /**
  *
@@ -223,8 +224,13 @@ public class LecturaUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       if(numero > 0){
         numero--;
         lectura.LeerXML(Archivo, this, numero);
+       }
+       else{
+       JOptionPane.showMessageDialog(null,"No hay registro anterior");
+       }
     }//GEN-LAST:event_jButton3ActionPerformed
     
     
