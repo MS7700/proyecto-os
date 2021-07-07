@@ -1,0 +1,15 @@
+El objetivo de estas dos aplicaciones es crear un web service que 
+envíe los créditos educativos de Fundapec a UNAPEC.
+
+CreacionWS: Se encargará de crear el script de la tabla PagosFundapec
+con los únicos atributos Matrícula y MontoPagado. El script deberá ser
+guardado en la carpeta de Scripts. Luego, desarrollará el Web Service SOAP, 
+con la función double getMonto(String matricula), la cual pedirá la matrícula,
+la buscará en la base de datos, y devolverá el monto pagado.
+
+ImplementaciónWS: Se encargará de crear una aplicación que le pedirá al 
+usuario su matrícula, y le devolverá un monto. Deberá utilizar la función
+double getMonto(String matricula), en caso de que la creación del WS, no
+esté listo, puede crear la función y hacer que retorne un valor cualquiera a
+modo de prueba.
+

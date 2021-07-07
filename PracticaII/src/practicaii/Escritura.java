@@ -19,29 +19,29 @@ import practicaii.entity.Nomina;
  * @author manue
  */
 public class Escritura {
-    private void writeFileLine(String fileName, String pLine) throws IOException {
-        File file = null;
-        BufferedWriter bw = null;
-        FileWriter fw = null;
-        try {
-            file = new File(fileName);
-            fw = new FileWriter(file);
-            bw = new BufferedWriter(fw);
-            String data = pLine;
-            bw.append(data);
-            //bw.writeLine(data);
-            bw.close();
-            System.out.println("Escritura de archivo realizada ...");
-        } catch (IOException e) {
-        } finally {
-            try {
-                if (bw != null) {
-                    bw.close();
-                }
-            } catch (IOException e) {
-            }
-        }
-    }
+//    private void writeFileLine(String fileName, String pLine) throws IOException {
+//        File file = null;
+//        BufferedWriter bw = null;
+//        FileWriter fw = null;
+//        try {
+//            file = new File(fileName);
+//            fw = new FileWriter(file);
+//            bw = new BufferedWriter(fw);
+//            String data = pLine;
+//            bw.append(data);
+//            //bw.writeLine(data);
+//            bw.close();
+//            System.out.println("Escritura de archivo realizada ...");
+//        } catch (IOException e) {
+//        } finally {
+//            try {
+//                if (bw != null) {
+//                    bw.close();
+//                }
+//            } catch (IOException e) {
+//            }
+//        }
+//    }
     
     
     public void CrearTXT(String periodo, File directory){
@@ -75,22 +75,6 @@ public class Escritura {
         }
         
         
-        
-//        for (Nomina registro : nomina) {
-//            String line = registro.getRNC() + "," + 
-//                          registro.getPeriodo() + "," +
-//                          registro.getSueldo() + "," + 
-//                          registro.getCedula() + "," + 
-//                          registro.getTipo_Moneda();
-//            System.out.println(line);
-//            try {
-//                bw.append(line);
-//            }
-//            catch(IOException e) {
-//                System.out.println(e.getMessage());
-//            }
-//        } 
-//        bw.close();
         JOptionPane.showMessageDialog(null,"Registros guardados correctamente");
     }
 }
