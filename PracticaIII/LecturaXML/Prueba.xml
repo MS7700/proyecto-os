@@ -1,0 +1,35 @@
+<?xml version ="1.0"?>
+
+<class xsi:schemaLocation = "PlantillaOpenSource.xsd">
+
+<prestamos>
+    <prestamo>
+        <estudiante>
+            <matricula>123456789</matricula>
+            <cedula>40231353935</cedula>
+        </estudiante>
+        <pagos>
+            <pago>
+                <carrera>Ing. software</carrera>
+                <periodo>2</periodo>
+                <monto>10000.00</monto>
+            </pago>
+        </pagos>
+    </prestamo>
+
+    <prestamo>
+        <estudiante>
+            <matricula>987654321</matricula>
+            <cedula>40231353935</cedula>
+        </estudiante>
+        <pagos>
+            <pago>
+                <carrera>Ing. sistemas</carrera>
+                <periodo>1</periodo>
+                <monto>5000.00</monto>
+            </pago>
+        </pagos>
+    </prestamo>
+</prestamos>
+
+</class>

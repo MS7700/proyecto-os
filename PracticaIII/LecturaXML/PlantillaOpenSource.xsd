@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name = "prestamos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="prestamo">
+					<xs:complexType>
+						<xs:element name="estudiante">
+							<xs:complexType>
+								<xs:element name="matricula" type="xs:string">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:length value="9"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="cedula" type="xs:integer">
+									<xs:simpleType>
+										<xs:restriction base="xs:integer">
+											<xs:totalDigits value="11"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="pagos">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="pago">
+										<xs:complexType>
+											<xs:element name="carrera" type="xs:string"/>
+											<xs:element name="periodo" type="xs:integer"/>
+											<xs:element name="monto" type="xs:decimal"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema> 
