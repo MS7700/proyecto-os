@@ -6,6 +6,7 @@
 package Modelo;
 
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
 
 /**
@@ -14,6 +15,11 @@ import java.sql.DriverManager;
  */
 public class Conexion {
     Connection con;
+    private static Driver driver = new org.apache.derby.jdbc.ClientDriver();
+    //Modificar estos valores
+    //private static String URLDerby = "jdbc:derby://localhost:1527/PracticaII";
+    //private static String usuario = "myuser";
+    //private static String contrasena = "12345";
     
     public Conexion(){
         try{

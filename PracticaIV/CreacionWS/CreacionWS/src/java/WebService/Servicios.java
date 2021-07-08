@@ -34,7 +34,7 @@ public class Servicios {
      */
     
     //Obtener la suma de los montos de esa matricula
-    @WebMethod(operationName = "listarPago")
+    @WebMethod(operationName = "listarPago2")
     public double sumarMontosMatricula(@WebParam(name = "matricula") String matricula) {
         List<Pago> dato = dao.listarMatricula(matricula);
         double suma = 0;

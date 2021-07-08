@@ -5,11 +5,15 @@
  */
 package implementacionws;
 
+import java.util.List;
+
 /**
  *
  * @author mslopez
  */
 public class ImplementacionWS {
+    
+    
 
     /**
      * @param args the command line arguments
@@ -21,9 +25,12 @@ public class ImplementacionWS {
     
     //Modificar esto
     public double getMontoFromMatricula(String matricula){
-        double monto = 1000; //Sustituir por web service
+        
+        implementacionws.Servicios_Service service = new implementacionws.Servicios_Service();
+        implementacionws.Servicios port = service.getServiciosPort();
+        return port.listarPago2(matricula);
+      //  double monto = 1000; //Sustituir por web service
         //double monto = sumarMontosMatricula(matricula)
-        return monto;
     }
     
 }

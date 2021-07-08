@@ -10,7 +10,6 @@ package implementacionws;
  * @author mslopez
  */
 public class ImplementacionUI extends javax.swing.JFrame {
-
     /**
      * Creates new form ImplementacionUI
      */
@@ -94,6 +93,7 @@ public class ImplementacionUI extends javax.swing.JFrame {
         String matricula = jTextField1.getText();
         ImplementacionWS implementacion = new ImplementacionWS();
         double monto = implementacion.getMontoFromMatricula(matricula);
+       // double monto = implementacion.li;
         jTextField2.setText(String.valueOf(monto));
     }//GEN-LAST:event_jButton1ActionPerformed
 
