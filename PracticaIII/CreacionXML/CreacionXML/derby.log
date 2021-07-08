@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Jul 07 23:06:14 AST 2021:
+ Iniciando instancia a816c00e-017a-8414-8373-000005871d90 de Derby, versión The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): 
+en el directorio de base de datos C:\Users\manue\proyecto-os\PracticaIII\CreacionXML\CreacionXML\PracticaTres con el cargador de clases jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93
+Cargado desde file:/C:/Users/manue/GlassFish_Server/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=15.0.1+9-18
+user.dir=C:\Users\manue\proyecto-os\PracticaIII\CreacionXML\CreacionXML
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Cargador de clases de base de datos iniciado - derby.database.classpath=''

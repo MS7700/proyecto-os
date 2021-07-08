@@ -11,6 +11,9 @@ package entity;
  */
 public class Pago {
     private String carrera;
+
+    public Pago() {
+    }
     private int periodo;
     private double monto;
 

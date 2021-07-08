@@ -17,7 +17,7 @@ public class Conexion {
     private static Connection cn = null;
     private static Driver driver = new org.apache.derby.jdbc.ClientDriver();
     //Modificar estos valores
-    private static String URLDerby = "jdbc:derby:PracticaTres;create=true";
+    private static String URLDerby = "jdbc:derby://localhost:1527/PracticaTres";
     private static String usuario = "root";
     private static String contrasena = "1234";
     public static Connection getConexion() throws SQLException {

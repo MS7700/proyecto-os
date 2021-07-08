@@ -15,6 +15,11 @@ public class Prestamo {
     private Estudiante estudiante;
     private List<Pago> pagos;
 
+    public Prestamo() {
+    }
+
+    
+
     public Estudiante getEstudiante() {
         return estudiante;
     }
