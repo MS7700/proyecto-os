@@ -11,7 +11,6 @@ import entity.Pago;
 import entity.Prestamo;
 import java.io.File;
 import java.util.List;
-import java.util.Scanner;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -44,7 +43,6 @@ public class CreacionXML {
 //            System.out.println(prestamos.get(i).getPagos().size());
 //            
 //        }
-
         try {
 
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -109,14 +107,16 @@ public class CreacionXML {
             
             }
             
+            
+
+            
+
+
              //Escribiendo el contenido en el archivo 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource fuenteDato = new DOMSource(doc);
-            System.out.println("Digite ubicación de archivo: ");
-            Scanner scanner = new Scanner(System.in);
-            String file = scanner.nextLine();
-            StreamResult resultado = new StreamResult(new File(file));
+            StreamResult resultado = new StreamResult(new File("C:\\Users\\manue\\Documents\\estudiantes.xml"));
 
              //Si quisieramos sacar la salida a la consola para "pruebas"
              //StreamResult resultado = new StreamResult(System.out);

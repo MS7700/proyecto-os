@@ -21,10 +21,9 @@ import ui.lectura.LecturaUI;
  * @author noel5
  */
 public class LecturaXML {
-    //String texto1,texto2,texto3,texto4,texto5,texto6,texto7,texto8 = "";
+    String texto1,texto2,texto3,texto4,texto5 = "";
    
     public void LeerXML(File Archivo, LecturaUI lecturaUI, int a){
-        String texto1 = "",texto2 = "",texto3 = "",texto4  = "",texto5 = "";
          try {
 	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -32,33 +31,24 @@ public class LecturaXML {
 
 	doc.getDocumentElement().normalize();
 
-	//System.out.println("Elemento raiz: " + doc.getDocumentElement().getNodeName());
+	System.out.println("Elemento raiz: " + doc.getDocumentElement().getNodeName());
 
 	NodeList nList = doc.getElementsByTagName("prestamo");
 
-	//System.out.println("----------------------------");
+	System.out.println("----------------------------");
         
         int temp = a;
         if(temp < nList.getLength()&& temp > -1){
             Node nNode = nList.item(temp);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                        //System.out.println(temp);
+                        System.out.println(temp);
 			Element eElement = (Element) nNode;
                         texto1 = eElement.getElementsByTagName("matricula").item(0).getTextContent();
                         texto2 = eElement.getElementsByTagName("cedula").item(0).getTextContent();
-                        for(int i = 0; i < eElement.getElementsByTagName("pago").getLength(); i++){
-                            texto3 += eElement.getElementsByTagName("carrera").item(i).getTextContent() + "\n";
-                            texto4 += eElement.getElementsByTagName("monto").item(i).getTextContent() + "\n";
-                            texto5 += eElement.getElementsByTagName("periodo").item(i).getTextContent() + "\n";
-                        }
-//                        texto3 = eElement.getElementsByTagName("carrera").item(0).getTextContent();
-//                        texto4 = eElement.getElementsByTagName("monto").item(0).getTextContent();
-//                        texto5 = eElement.getElementsByTagName("periodo").item(0).getTextContent();
-//                        texto6 = eElement.getElementsByTagName("carrera").item(1).getTextContent();
-//                        texto7 = eElement.getElementsByTagName("monto").item(1).getTextContent();
-//                        texto8 = eElement.getElementsByTagName("periodo").item(1).getTextContent();
+                        texto3 = eElement.getElementsByTagName("carrera").item(0).getTextContent();
+                        texto4 = eElement.getElementsByTagName("monto").item(0).getTextContent();
+                        texto5 = eElement.getElementsByTagName("periodo").item(0).getTextContent();
                         lecturaUI.insertarATextpane(texto1, texto2, texto3, texto4, texto5);
-                        //System.out.println(texto8);
                        
         }
         }
