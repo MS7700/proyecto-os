@@ -1,0 +1,11 @@
+CREATE TRIGGER `TRIGGER_DELETE_PERSONA` BEFORE DELETE ON `persona`
+ FOR EACH ROW INSERT INTO auditoria (Usuario, Fecha, Accion, IdPersona, Cedula, Nombre, Apellido, Salario)
+VALUES (CURRENT_USER(), NOW(),"PERSONA ELIMINADA", OLD.Id, OLD.Cedula, OLD.Nombre, OLD.Apellido, OLD.Salario)
+
+CREATE TRIGGER `TRIGGER_INSERT_PERSONA` AFTER INSERT ON `persona`
+ FOR EACH ROW INSERT INTO auditoria (Usuario, Fecha, Accion, IdPersona, Cedula, Nombre, Apellido, Salario)
+VALUES (CURRENT_USER(), NOW(),"PERSONA INSERTADA", NEW.Id, NEW.Cedula, NEW.Nombre, NEW.Apellido, NEW.Salario)
+
+CREATE TRIGGER `TRIGGER_UPDATE_PERSONA` AFTER UPDATE ON `persona`
+ FOR EACH ROW INSERT INTO auditoria (Usuario, Fecha, Accion, IdPersona, Cedula, Nombre, Apellido, Salario)
+VALUES (CURRENT_USER(), NOW(),"PERSONA ACTUALIZADA", NEW.Id, NEW.Cedula, NEW.Nombre, NEW.Apellido, NEW.Salario)
