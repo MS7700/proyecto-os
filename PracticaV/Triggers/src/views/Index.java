@@ -1,3 +1,11 @@
+//INTEGRANTES:
+//
+//Noel Del Rosario
+//Manuel López 
+//Hendry Martínez
+//Christopher Reyes
+
+
 package views;
 
 import config.DbConnection;
