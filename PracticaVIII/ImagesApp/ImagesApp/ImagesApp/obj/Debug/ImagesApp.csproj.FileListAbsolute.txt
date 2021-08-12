@@ -1,0 +1,9 @@
+C:\Users\hendr\source\repos\ImagesApp\ImagesApp\bin\Debug\ImagesApp.exe.config
+C:\Users\hendr\source\repos\ImagesApp\ImagesApp\bin\Debug\ImagesApp.exe
+C:\Users\hendr\source\repos\ImagesApp\ImagesApp\bin\Debug\ImagesApp.pdb
+C:\Users\hendr\source\repos\ImagesApp\ImagesApp\obj\Debug\ImagesApp.Form1.resources
+C:\Users\hendr\source\repos\ImagesApp\ImagesApp\obj\Debug\ImagesApp.Properties.Resources.resources
+C:\Users\hendr\source\repos\ImagesApp\ImagesApp\obj\Debug\ImagesApp.csproj.GenerateResource.cache
+C:\Users\hendr\source\repos\ImagesApp\ImagesApp\obj\Debug\ImagesApp.csproj.CoreCompileInputs.cache
+C:\Users\hendr\source\repos\ImagesApp\ImagesApp\obj\Debug\ImagesApp.exe
+C:\Users\hendr\source\repos\ImagesApp\ImagesApp\obj\Debug\ImagesApp.pdb
